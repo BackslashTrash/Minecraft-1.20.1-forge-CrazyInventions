@@ -1,6 +1,10 @@
 package net.joenaldbrump.crazyinventions;
 
 import com.mojang.logging.LogUtils;
+import net.joenaldbrump.crazyinventions.item.CreativeTabs;
+import net.joenaldbrump.crazyinventions.block.ModBlocks;
+import net.joenaldbrump.crazyinventions.item.ModItems;
+import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
@@ -18,20 +22,20 @@ import org.slf4j.Logger;
 // The value here should match an entry in the META-INF/mods.toml file
 @Mod(CrazyInventions.MOD_ID)
 public class CrazyInventions {
-    // Define mod id in a common place for everything to reference
+
     public static final String MOD_ID = "crazyinventions";
-    // Directly reference a slf4j logger
     private static final Logger LOGGER = LogUtils.getLogger();
 
     public CrazyInventions()  {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
+        ModItems.register(modEventBus);
+        CreativeTabs.register(modEventBus);
+        ModBlocks.register(modEventBus);
+
         modEventBus.addListener(this::commonSetup);
-
         MinecraftForge.EVENT_BUS.register(this);
-
         modEventBus.addListener(this::addCreative);
-
         ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, Config.SPEC);
     }
 
@@ -39,12 +43,17 @@ public class CrazyInventions {
 
     }
 
-    // Add the example block item to the building blocks tab
     private void addCreative(BuildCreativeModeTabContentsEvent event)  {
+        if (event.getTabKey() == CreativeModeTabs.FOOD_AND_DRINKS) {
+            event.accept(ModItems.CHEESE);
+            event.accept(ModItems.PIZZA_BASE);
+            event.accept(ModBlocks.CHEESE_BLOCK);
+            event.accept(ModItems.CHEESE_PIZZA);
+            event.accept(ModItems.CHEESE_PIZZA_SLICE);
+        }
 
     }
 
-    // You can use SubscribeEvent and let the Event Bus discover methods to call
     @SubscribeEvent
     public void onServerStarting(ServerStartingEvent event)  {
 
