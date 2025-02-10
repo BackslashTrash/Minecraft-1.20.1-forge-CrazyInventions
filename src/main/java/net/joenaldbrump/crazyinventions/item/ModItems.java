@@ -1,8 +1,10 @@
 package net.joenaldbrump.crazyinventions.item;
 
 import net.joenaldbrump.crazyinventions.block.ModBlocks;
+import net.joenaldbrump.crazyinventions.item.custom.CheeseBucketItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemNameBlockItem;
+import net.minecraft.world.item.Items;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -30,6 +32,11 @@ public class ModItems {
 
     public static final RegistryObject<Item> CHEESE_PIZZA_SLICE = ITEMS.register("cheese_pizza_slice",
             () -> new Item(new Item.Properties().food(ModFoodItems.CHEESE_PIZZA_SLICE)));
+
+    public static final RegistryObject<Item> CHEESE_BUCKET = ITEMS.register("cheese_bucket",
+            () -> new CheeseBucketItem(new Item.Properties().craftRemainder(Items.BUCKET).stacksTo(16)));
+
+
 
 
 

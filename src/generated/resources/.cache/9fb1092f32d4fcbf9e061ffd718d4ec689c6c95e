@@ -1,4 +1,12 @@
-// 1.20.1	2025-02-07T17:26:25.7172459	Recipes
+// 1.20.1	2025-02-09T22:48:19.8800121	Recipes
+89f1527a8156bf1319338e29698efe465b7d29c6 data/crazyinventions/advancements/recipes/food/cheese.json
+f3342855a0ec594e668f575980d47665bafcda9d data/crazyinventions/advancements/recipes/food/cheese_bucket_from_smelting_milk_bucket.json
+1200439ea3eb262df461334b82bb4ed3b39125a9 data/crazyinventions/advancements/recipes/food/cheese_pizza.json
+85ce33e126a37ea5d0a51d99cbfdf622296f2422 data/crazyinventions/advancements/recipes/food/cheese_pizza_slice.json
+05087ae4aa101acb6601a14ff0a156929145aecd data/crazyinventions/recipes/cheese.json
+ca4bffad02e3f970f397fb486456ea10d6da02b9 data/crazyinventions/recipes/cheese_bucket_from_smelting_milk_bucket.json
+8f1f1efa7370664184ca592dd43258a1c1ba9f20 data/crazyinventions/recipes/cheese_pizza.json
+4faed1022194baa681190ce84277a1bc02b900d4 data/crazyinventions/recipes/cheese_pizza_slice.json
 94fb5a10cfa4f0c082807beeedfeeb6ce23af510 data/minecraft/advancements/recipes/food/cheese.json
 3739e2af6264931c05682c1e73622e06ca92560e data/minecraft/advancements/recipes/food/cheese_block.json
 0cd9342898e287ed0765b75dd5e174ec728cbae5 data/minecraft/recipes/cheese.json

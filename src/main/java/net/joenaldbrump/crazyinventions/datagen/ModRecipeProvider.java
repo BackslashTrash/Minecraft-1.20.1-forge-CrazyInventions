@@ -6,10 +6,10 @@ import net.joenaldbrump.crazyinventions.item.ModItems;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.AbstractCookingRecipe;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.crafting.RecipeSerializer;
-import net.minecraft.world.item.crafting.ShapelessRecipe;
 import net.minecraft.world.level.ItemLike;
 import net.minecraftforge.common.crafting.conditions.IConditionBuilder;
 
@@ -18,9 +18,9 @@ import java.util.List;
 import java.util.function.Consumer;
 
 public class ModRecipeProvider extends RecipeProvider implements IConditionBuilder {
-    public static final  List<ItemLike> SMELTABLE_PIZZA = List.of(ModItems.CHEESE_PIZZA.get());
-
-
+    public static final List<ItemLike> CHEESE_PIZZA = List.of(ModItems.CHEESE_PIZZA.get());
+    public static final List<ItemLike> CHEESE_PIZZA_SLICE =  List.of(ModItems.CHEESE_PIZZA_SLICE.get());
+    public static final List<ItemLike> MILK_BUCKET = List.of(Items.MILK_BUCKET);
 
     public ModRecipeProvider(PackOutput pOutput) {
         super(pOutput);
@@ -29,12 +29,34 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
     @Override
     protected void buildRecipes(Consumer<FinishedRecipe> consumer) {
 
+
         nineBlockStorageRecipes(consumer, RecipeCategory.FOOD, ModItems.CHEESE.get(), RecipeCategory.FOOD, ModBlocks.CHEESE_BLOCK.get());
+
         ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD,ModItems.CHEESE_PIZZA_SLICE.get(),8)
                 .requires(ModItems.CHEESE_PIZZA.get())
-                .unlockedBy("has_cheese_pizza",has(ModItems.CHEESE_PIZZA.get()))
-                .save(consumer,"cheese_pizza_slice");
+                .unlockedBy(getHasName(ModItems.CHEESE_PIZZA.get()),has(ModItems.CHEESE_PIZZA.get()))
+                .save(consumer);
+
+        oreSmelting(consumer, MILK_BUCKET, RecipeCategory.FOOD, ModItems.CHEESE_BUCKET.get(), 0.25f, 100, "cheese_bucket");
+
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.FOOD, ModItems.CHEESE_PIZZA.get(),1)
+                .pattern("   ")
+                .pattern("ccc")
+                .pattern("tpt")
+                .define('c', ModItems.CHEESE.get())
+                .define('t', ModItems.TOMATO.get())
+                .define('p', ModItems.PIZZA_BASE.get())
+                .unlockedBy(getHasName(ModItems.PIZZA_BASE.get()),has(ModItems.PIZZA_BASE.get()))
+                .save(consumer);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, ModItems.CHEESE.get(),9)
+                .requires(ModItems.CHEESE_BUCKET.get())
+                .unlockedBy(getHasName(ModItems.CHEESE_BUCKET.get()),has(ModItems.CHEESE_BUCKET.get()))
+                .save(consumer);
     }
+
+
 
     protected static void oreSmelting(Consumer<FinishedRecipe> pFinishedRecipeConsumer, List<ItemLike> pIngredients, RecipeCategory pCategory, ItemLike pResult, float pExperience, int pCookingTIme, String pGroup) {
         oreCooking(pFinishedRecipeConsumer, RecipeSerializer.SMELTING_RECIPE, pIngredients, pCategory, pResult, pExperience, pCookingTIme, pGroup, "_from_smelting");

@@ -4,6 +4,7 @@ import com.mojang.logging.LogUtils;
 import net.joenaldbrump.crazyinventions.item.CreativeTabs;
 import net.joenaldbrump.crazyinventions.block.ModBlocks;
 import net.joenaldbrump.crazyinventions.item.ModItems;
+import net.joenaldbrump.crazyinventions.item.custom.CheeseBucketItem;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
@@ -36,7 +37,10 @@ public class CrazyInventions {
         modEventBus.addListener(this::commonSetup);
         MinecraftForge.EVENT_BUS.register(this);
         modEventBus.addListener(this::addCreative);
+
+
         ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, Config.SPEC);
+
     }
 
     private void commonSetup(final FMLCommonSetupEvent event) {

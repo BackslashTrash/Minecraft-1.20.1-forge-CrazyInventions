@@ -4,5 +4,10 @@
   "creativetab.crazyinventions_tab": "Crazy Inventions",
   "block.crazyinventions.cheese_block": "Block of Cheese",
   "item.crazyinventions.tomato_seeds": "Tomato Seeds",
-  "item.crazyinventions.tomato": "Tomato"
+  "item.crazyinventions.tomato": "Tomato",
+  "tooltip.crazyinventions.cheese_bucket.tooltip": "Time to get CRAAAZY",
+  "tooltip.crazyinventions.cheese.tooltip": "CHEESE CHEESE CHEESE CHEESE CHEESE",
+  "item.crazyinventions.cheese_pizza": "Cheese Pizza",
+  "item.crazyinventions.cheese_bucket": "Bucket of Cheese",
+  "item.crazyinventions.cheese_pizza_slice": "Slice of Cheese Pizza"
 }

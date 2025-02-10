@@ -25,6 +25,7 @@ public class CreativeTabs {
                 output.accept(ModItems.TOMATO.get());
                 output.accept(ModItems.CHEESE_PIZZA.get());
                 output.accept(ModItems.CHEESE_PIZZA_SLICE.get());
+                output.accept(ModItems.CHEESE_BUCKET.get());
             })
             .build()
     );
