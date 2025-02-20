@@ -37,6 +37,6 @@ public class RedPepperPlantCrop extends CropBlock {
 
     @Override
     protected ItemLike getBaseSeedId() {
-        return ModItems.TOMATO_SEEDS.get();
+        return ModItems.RED_PEPPER_SEEDS.get();
     }
 }

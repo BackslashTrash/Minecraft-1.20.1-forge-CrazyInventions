@@ -30,6 +30,10 @@ public class CreativeTabs {
                 output.accept(ModItems.ROASTED_COFFEE_BEANS.get());
                 output.accept(ModItems.PAPER_CUP.get());
                 output.accept(ModItems.FRYING_PAN.get());
+                output.accept(ModItems.PEPPERONI_SAUSAGE.get());
+                output.accept(ModItems.COOKED_PEPPERONI_SAUSAGE.get());
+                output.accept(ModItems.RED_PEPPER_SEEDS.get());
+                output.accept(ModItems.RED_PEPPER.get());
             })
             .build()
     );
