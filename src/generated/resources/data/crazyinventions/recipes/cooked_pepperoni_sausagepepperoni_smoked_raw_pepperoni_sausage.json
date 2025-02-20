@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:smoking",
+  "category": "food",
+  "cookingtime": 100,
+  "experience": 0.25,
+  "group": "cooked_pepperoni_sausage",
+  "ingredient": {
+    "item": "crazyinventions:raw_pepperoni_sausage"
+  },
+  "result": "crazyinventions:cooked_pepperoni_sausage"
+}

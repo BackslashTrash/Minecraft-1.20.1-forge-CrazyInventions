@@ -22,6 +22,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
     public static final List<ItemLike> CHEESE_PIZZA_SLICE =  List.of(ModItems.CHEESE_PIZZA_SLICE.get());
     public static final List<ItemLike> MILK_BUCKET = List.of(Items.MILK_BUCKET);
     public static final List<ItemLike> RAW_COFFEE_BEANS = List.of(ModItems.RAW_COFFEE_BEANS.get());
+    public static final List<ItemLike> PEPPERONI_SAUSAGE = List.of(ModItems.PEPPERONI_SAUSAGE.get());
 
     public ModRecipeProvider(PackOutput pOutput) {
         super(pOutput);
@@ -40,7 +41,9 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
         oreSmelting(consumer, MILK_BUCKET, RecipeCategory.FOOD, ModItems.CHEESE_BUCKET.get(), 0.25f, 100, "cheese_bucket");
         oreSmelting(consumer, RAW_COFFEE_BEANS, RecipeCategory.FOOD, ModItems.ROASTED_COFFEE_BEANS.get(), 0.25f, 100, "roasted_coffee_beans");
-
+        oreSmelting(consumer, PEPPERONI_SAUSAGE, RecipeCategory.FOOD, ModItems.COOKED_PEPPERONI_SAUSAGE.get(), 0.25f,300,"cooked_pepperoni_sausage");
+        oreCooking(consumer, RecipeSerializer.SMOKING_RECIPE, PEPPERONI_SAUSAGE, RecipeCategory.FOOD, ModItems.COOKED_PEPPERONI_SAUSAGE.get(), 0.25f, 100, "cooked_pepperoni_sausage", "pepperoni_smoked");
+        oreCooking(consumer, RecipeSerializer.CAMPFIRE_COOKING_RECIPE, PEPPERONI_SAUSAGE, RecipeCategory.FOOD, ModItems.COOKED_PEPPERONI_SAUSAGE.get(), 0f, 600,"cooked_pepperoni_sausage","pepperoni_campfire");
 
         ShapedRecipeBuilder.shaped(RecipeCategory.FOOD, ModItems.CHEESE_PIZZA.get(),1)
                 .pattern("   ")
@@ -92,8 +95,11 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy(getHasName(Items.IRON_INGOT), has(Items.IRON_INGOT))
                 .save(consumer);
 
-
-
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, ModItems.PEPPERONI_SAUSAGE.get(),1)
+                .requires(ModItems.PAPRIKA.get(),2)
+                .requires(Items.PORKCHOP)
+                .unlockedBy(getHasName(ModItems.PAPRIKA.get()),has(ModItems.PAPRIKA.get()))
+                .save(consumer);
 
     }
 

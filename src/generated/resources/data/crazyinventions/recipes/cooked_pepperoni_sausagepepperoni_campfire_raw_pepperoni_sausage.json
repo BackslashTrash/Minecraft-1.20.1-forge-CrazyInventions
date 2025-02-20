@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:campfire_cooking",
+  "category": "food",
+  "cookingtime": 600,
+  "experience": 0.0,
+  "group": "cooked_pepperoni_sausage",
+  "ingredient": {
+    "item": "crazyinventions:raw_pepperoni_sausage"
+  },
+  "result": "crazyinventions:cooked_pepperoni_sausage"
+}
