@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "h": {
+      "item": "minecraft:iron_ingot"
+    },
+    "m": {
+      "item": "minecraft:stick"
+    }
+  },
+  "pattern": [
+    "   ",
+    "hhm",
+    "hhh"
+  ],
+  "result": {
+    "item": "crazyinventions:frying_pan"
+  },
+  "show_notification": true
+}

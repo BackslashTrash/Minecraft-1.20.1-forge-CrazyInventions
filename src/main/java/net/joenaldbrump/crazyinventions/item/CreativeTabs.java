@@ -26,6 +26,10 @@ public class CreativeTabs {
                 output.accept(ModItems.CHEESE_PIZZA.get());
                 output.accept(ModItems.CHEESE_PIZZA_SLICE.get());
                 output.accept(ModItems.CHEESE_BUCKET.get());
+                output.accept(ModItems.RAW_COFFEE_BEANS.get());
+                output.accept(ModItems.ROASTED_COFFEE_BEANS.get());
+                output.accept(ModItems.PAPER_CUP.get());
+                output.accept(ModItems.FRYING_PAN.get());
             })
             .build()
     );

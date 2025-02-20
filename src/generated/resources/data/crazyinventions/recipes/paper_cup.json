@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "c": {
+      "item": "minecraft:paper"
+    }
+  },
+  "pattern": [
+    "   ",
+    "cc ",
+    "cc "
+  ],
+  "result": {
+    "count": 2,
+    "item": "crazyinventions:paper_cup"
+  },
+  "show_notification": true
+}

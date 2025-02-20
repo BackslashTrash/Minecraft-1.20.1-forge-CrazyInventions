@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "minecraft:water_bucket"
+    },
+    {
+      "item": "minecraft:milk_bucket"
+    },
+    {
+      "item": "crazyinventions:paper_cup"
+    },
+    {
+      "item": "minecraft:sugar"
+    },
+    {
+      "item": "crazyinventions:roasted_coffee_beans"
+    }
+  ],
+  "result": {
+    "item": "crazyinventions:starbucks_latte"
+  }
+}

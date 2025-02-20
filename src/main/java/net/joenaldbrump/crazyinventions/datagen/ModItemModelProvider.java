@@ -24,6 +24,15 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.CHEESE_BUCKET);
         simpleItem(ModItems.CHEESE_PIZZA_SLICE);
         simpleItem(ModItems.CHEESE_PIZZA);
+        simpleItem(ModItems.RAW_COFFEE_BEANS);
+        simpleItem(ModItems.ROASTED_COFFEE_BEANS);
+        simpleItem(ModItems.PAPER_CUP);
+        simpleItem(ModItems.STARBUCKS_LATTE);
+        simpleItem(ModItems.PAPRIKA);
+        simpleItem(ModItems.RED_PEPPER);
+        simpleItem(ModItems.RED_PEPPER_SEEDS);
+        simpleItem(ModItems.PEPPERONI_SAUSAGE);
+        simpleItem(ModItems.COOKED_PEPPERONI_SAUSAGE);
     }
 
     private ItemModelBuilder simpleItem(RegistryObject<Item> item) {

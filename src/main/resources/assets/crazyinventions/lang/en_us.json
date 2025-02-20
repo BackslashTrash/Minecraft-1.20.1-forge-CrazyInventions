@@ -9,5 +9,10 @@
   "tooltip.crazyinventions.cheese.tooltip": "CHEESE CHEESE CHEESE CHEESE CHEESE",
   "item.crazyinventions.cheese_pizza": "Cheese Pizza",
   "item.crazyinventions.cheese_bucket": "Bucket of Cheese",
-  "item.crazyinventions.cheese_pizza_slice": "Slice of Cheese Pizza"
+  "item.crazyinventions.cheese_pizza_slice": "Slice of Cheese Pizza",
+  "item.crazyinventions.raw_coffee_beans": "Raw Coffee Beans",
+  "item.crazyinventions.roasted_coffee_beans": "Roasted Coffee Beans",
+  "item.crazyinventions.starbucks_latte": "Starbucks Latte",
+  "item.crazyinventions.paper_cup": "Paper Cup",
+  "item.crazyinventions.frying_pan": "Frying Pan"
 }

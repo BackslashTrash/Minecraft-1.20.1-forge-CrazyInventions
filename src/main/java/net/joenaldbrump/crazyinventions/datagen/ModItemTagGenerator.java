@@ -1,6 +1,7 @@
 package net.joenaldbrump.crazyinventions.datagen;
 
 import net.joenaldbrump.crazyinventions.CrazyInventions;
+import net.joenaldbrump.crazyinventions.block.ModBlocks;
 import net.joenaldbrump.crazyinventions.item.ModItems;
 import net.joenaldbrump.crazyinventions.util.ModTags;
 import net.minecraft.core.HolderLookup;
@@ -24,6 +25,7 @@ public class ModItemTagGenerator extends ItemTagsProvider {
                 .add(ModItems.CHEESE.get())
                 .add(ModItems.CHEESE_PIZZA.get())
                 .add(ModItems.CHEESE_PIZZA_SLICE.get())
-                .add(ModItems.CHEESE_BUCKET.get());
+                .add(ModItems.CHEESE_BUCKET.get())
+                .add(ModBlocks.CHEESE_BLOCK.get().asItem());
     }
 }

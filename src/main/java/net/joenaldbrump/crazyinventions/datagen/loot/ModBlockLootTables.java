@@ -1,6 +1,7 @@
 package net.joenaldbrump.crazyinventions.datagen.loot;
 
 import net.joenaldbrump.crazyinventions.block.ModBlocks;
+import net.joenaldbrump.crazyinventions.block.custom.CoffeePlantCrop;
 import net.joenaldbrump.crazyinventions.block.custom.TomatoPlantBlock;
 import net.joenaldbrump.crazyinventions.item.ModItems;
 import net.minecraft.advancements.critereon.StatePropertiesPredicate;
@@ -18,7 +19,6 @@ import net.minecraft.world.level.storage.loot.functions.ApplyBonusCount;
 import net.minecraft.world.level.storage.loot.functions.SetItemCountFunction;
 import net.minecraft.world.level.storage.loot.predicates.LootItemBlockStatePropertyCondition;
 import net.minecraft.world.level.storage.loot.predicates.LootItemCondition;
-import net.minecraft.world.level.storage.loot.providers.number.ConstantValue;
 import net.minecraft.world.level.storage.loot.providers.number.UniformGenerator;
 import net.minecraftforge.registries.RegistryObject;
 import java.util.Set;
@@ -39,11 +39,34 @@ public class ModBlockLootTables extends BlockLootSubProvider {
                 .hasBlockStateProperties(ModBlocks.TOMATO_CROP.get())
                 .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(TomatoPlantBlock.AGE, 5));
 
+        LootItemCondition.Builder coffee$builder = LootItemBlockStatePropertyCondition
+                .hasBlockStateProperties(ModBlocks.COFFEE_CROP.get())
+                .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(CoffeePlantCrop.AGE, 5));
+
+        LootItemCondition.Builder redpepper$builder = LootItemBlockStatePropertyCondition
+                .hasBlockStateProperties(ModBlocks.COFFEE_CROP.get())
+                .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(CoffeePlantCrop.AGE, 5));
+
+
+
         this.add(ModBlocks.TOMATO_CROP.get(),
                 createCrops(ModBlocks.TOMATO_CROP.get(),
                         ModItems.TOMATO.get(),
                         ModItems.TOMATO_SEEDS.get(),
                         lootcondition$builder,1,3));
+
+        this.add(ModBlocks.COFFEE_CROP.get(),
+                createCrops(ModBlocks.COFFEE_CROP.get(),
+                        ModItems.RAW_COFFEE_BEANS.get(),
+                        ModItems.RAW_COFFEE_BEANS.get(),
+                        coffee$builder,1,1));
+
+        this.add(ModBlocks.RED_PEPPER_CROP.get(),
+                createCrops(ModBlocks.RED_PEPPER_CROP.get(),
+                        ModItems.RED_PEPPER.get(),
+                        ModItems.RED_PEPPER_SEEDS.get(),
+                        redpepper$builder,1,3));
+
 
     }
 

@@ -2,6 +2,8 @@ package net.joenaldbrump.crazyinventions.datagen;
 
 import net.joenaldbrump.crazyinventions.CrazyInventions;
 import net.joenaldbrump.crazyinventions.block.ModBlocks;
+import net.joenaldbrump.crazyinventions.block.custom.CoffeePlantCrop;
+import net.joenaldbrump.crazyinventions.block.custom.RedPepperPlantCrop;
 import net.joenaldbrump.crazyinventions.block.custom.TomatoPlantBlock;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
@@ -27,13 +29,24 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
     private void blockWItem(RegistryObject<Block> blockRegistryObject){
         simpleBlockWithItem(blockRegistryObject.get(),cubeAll(blockRegistryObject.get()));
-
-        makeTomato((CropBlock) ModBlocks.TOMATO_CROP.get(),"tomato_stage","tomato_stage");
+        makeTomatoCrop((CropBlock) ModBlocks.TOMATO_CROP.get(),"tomato_stage","tomato_stage");
+        makeCoffeeCrop((CropBlock) ModBlocks.COFFEE_CROP.get(),"coffee_stage","coffee_stage");
+        makePepperCrop((CropBlock) ModBlocks.RED_PEPPER_CROP.get(),"red_pepper_stage","red_pepper_stage");
     }
 
 
-    public void makeTomato(CropBlock cropBlock, String modelName, String textureName) {
+    public void makeTomatoCrop(CropBlock cropBlock, String modelName, String textureName) {
         Function<BlockState, ConfiguredModel[]> function = blockState -> tomatoStatesModels(blockState, cropBlock, modelName, textureName);
+        getVariantBuilder(cropBlock).forAllStates(function);
+    }
+
+    public void makeCoffeeCrop(CropBlock cropBlock, String modelName, String textureName) {
+        Function<BlockState, ConfiguredModel[]> function = blockState -> coffeeStatesModels(blockState, cropBlock, modelName, textureName);
+        getVariantBuilder(cropBlock).forAllStates(function);
+    }
+
+    public void makePepperCrop(CropBlock cropBlock, String modelName, String textureName) {
+        Function<BlockState, ConfiguredModel[]> function = blockState -> redPepperStatesModels(blockState, cropBlock, modelName, textureName);
         getVariantBuilder(cropBlock).forAllStates(function);
     }
 
@@ -44,6 +57,20 @@ public class ModBlockStateProvider extends BlockStateProvider {
         ConfiguredModel[] models = new ConfiguredModel[1];
         models[0] = new ConfiguredModel(models().crop(modelName + state.getValue(((TomatoPlantBlock) cropBlock).getAgeProperty()),
                 new ResourceLocation(CrazyInventions.MOD_ID,"block/" + textureName + state.getValue(((TomatoPlantBlock) cropBlock).getAgeProperty()))).renderType("cutout"));
+        return models;
+    }
+
+    private ConfiguredModel[] coffeeStatesModels(BlockState state, CropBlock cropBlock, String modelName, String textureName) {
+        ConfiguredModel[] models = new ConfiguredModel[1];
+        models[0] = new ConfiguredModel(models().crop(modelName + state.getValue(((CoffeePlantCrop) cropBlock).getAgeProperty()),
+                new ResourceLocation(CrazyInventions.MOD_ID,"block/" + textureName + state.getValue(((CoffeePlantCrop) cropBlock).getAgeProperty()))).renderType("cutout"));
+        return models;
+    }
+
+    private ConfiguredModel[] redPepperStatesModels(BlockState state, CropBlock cropBlock, String modelName, String textureName) {
+        ConfiguredModel[] models = new ConfiguredModel[1];
+        models[0] = new ConfiguredModel(models().crop(modelName + state.getValue(((RedPepperPlantCrop) cropBlock).getAgeProperty()),
+                new ResourceLocation(CrazyInventions.MOD_ID,"block/" + textureName + state.getValue(((RedPepperPlantCrop) cropBlock).getAgeProperty()))).renderType("cutout"));
         return models;
     }
 }

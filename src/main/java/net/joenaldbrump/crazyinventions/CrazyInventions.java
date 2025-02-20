@@ -4,7 +4,6 @@ import com.mojang.logging.LogUtils;
 import net.joenaldbrump.crazyinventions.item.CreativeTabs;
 import net.joenaldbrump.crazyinventions.block.ModBlocks;
 import net.joenaldbrump.crazyinventions.item.ModItems;
-import net.joenaldbrump.crazyinventions.item.custom.CheeseBucketItem;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
@@ -54,6 +53,12 @@ public class CrazyInventions {
             event.accept(ModBlocks.CHEESE_BLOCK);
             event.accept(ModItems.CHEESE_PIZZA);
             event.accept(ModItems.CHEESE_PIZZA_SLICE);
+            event.accept(ModItems.STARBUCKS_LATTE);
+            event.accept(ModItems.COOKED_PEPPERONI_SAUSAGE);
+            event.accept(ModItems.PEPPERONI_SAUSAGE);
+            event.accept(ModItems.RED_PEPPER);
+            event.accept(ModItems.RED_PEPPER_SEEDS);
+            event.accept(ModItems.PAPRIKA);
         }
 
     }

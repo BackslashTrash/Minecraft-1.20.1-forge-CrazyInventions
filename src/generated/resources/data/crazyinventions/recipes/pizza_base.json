@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "c": {
+      "item": "minecraft:water_bucket"
+    },
+    "w": {
+      "item": "minecraft:wheat"
+    }
+  },
+  "pattern": [
+    " w ",
+    "wcw",
+    " w "
+  ],
+  "result": {
+    "item": "crazyinventions:pizza_base"
+  },
+  "show_notification": true
+}

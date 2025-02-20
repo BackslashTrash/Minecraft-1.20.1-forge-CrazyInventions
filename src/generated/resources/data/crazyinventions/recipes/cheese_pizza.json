@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "c": {
+      "item": "crazyinventions:cheese"
+    },
+    "p": {
+      "item": "crazyinventions:pizza_base"
+    },
+    "t": {
+      "item": "crazyinventions:tomato"
+    }
+  },
+  "pattern": [
+    "   ",
+    "ccc",
+    "tpt"
+  ],
+  "result": {
+    "item": "crazyinventions:cheese_pizza"
+  },
+  "show_notification": true
+}

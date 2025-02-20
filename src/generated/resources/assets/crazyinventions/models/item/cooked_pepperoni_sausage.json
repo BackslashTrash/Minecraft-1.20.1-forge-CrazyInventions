@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "crazyinventions:item/cooked_pepperoni_sausage"
+  }
+}

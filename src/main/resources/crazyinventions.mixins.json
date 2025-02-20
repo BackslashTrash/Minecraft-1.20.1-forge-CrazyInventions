@@ -1,0 +1,12 @@
+{
+  "required": true,
+  "package": "net.joenaldbrump.crazyinventions.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "refmap": "crazyinventions.refmap.json",
+  "mixins": [
+    "ModifiedWaterBucket"
+  ],
+  "client": [
+  ],
+  "minVersion": "0.8"
+}
