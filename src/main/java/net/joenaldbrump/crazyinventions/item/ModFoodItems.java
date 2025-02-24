@@ -37,4 +37,16 @@ public class ModFoodItems {
             .nutrition(8)
             .saturationMod(8f)
             .build();
+
+    public static final FoodProperties PEPPERONI_PIZZA =  new FoodProperties.Builder()
+            .nutrition(32)
+            .saturationMod(12f)
+            .effect(() -> new MobEffectInstance(MobEffects.DAMAGE_BOOST,1280), 1f)
+            .build();
+
+    public static final FoodProperties PEPPERONI_PIZZA_SLICE =  new FoodProperties.Builder()
+            .nutrition(32)
+            .saturationMod(12f)
+            .effect(() -> new MobEffectInstance(MobEffects.DAMAGE_BOOST,160), 1f)
+            .build();
 }

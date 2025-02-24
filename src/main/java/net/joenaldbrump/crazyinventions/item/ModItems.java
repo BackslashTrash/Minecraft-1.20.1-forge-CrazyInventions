@@ -70,6 +70,12 @@ public class ModItems {
     public static final RegistryObject<Item> PAPRIKA = ITEMS.register("paprika",
             () -> new Item(new Item.Properties()));
 
+    public static final RegistryObject<Item> PEPPERONI_PIZZA = ITEMS.register("pepperoni_pizza",
+            () -> new Item(new Item.Properties().food(ModFoodItems.PEPPERONI_PIZZA).stacksTo(1)));
+
+    public static final RegistryObject<Item> PEPPERONI_PIZZA_SLICE = ITEMS.register("pepperoni_pizza_slice",
+            () -> new Item(new Item.Properties().food(ModFoodItems.PEPPERONI_PIZZA_SLICE)));
+
 
 
     public static void register(IEventBus eventBus) {
