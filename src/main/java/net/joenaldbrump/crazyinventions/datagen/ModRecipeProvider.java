@@ -101,6 +101,21 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy(getHasName(ModItems.PAPRIKA.get()),has(ModItems.PAPRIKA.get()))
                 .save(consumer);
 
+        ShapedRecipeBuilder.shaped(RecipeCategory.FOOD, ModItems.PEPPERONI_PIZZA.get(),1)
+                .pattern(" d ")
+                .pattern("cdc")
+                .pattern("tpt")
+                .define('c', ModItems.CHEESE.get())
+                .define('t', ModItems.TOMATO.get())
+                .define('p', ModItems.PIZZA_BASE.get())
+                .define('d', ModItems.COOKED_PEPPERONI_SAUSAGE.get())
+                .unlockedBy(getHasName(ModItems.PIZZA_BASE.get()),has(ModItems.PIZZA_BASE.get()))
+                .save(consumer);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD,ModItems.PEPPERONI_PIZZA_SLICE.get(),8)
+                .requires(ModItems.PEPPERONI_PIZZA.get())
+                .unlockedBy(getHasName(ModItems.PEPPERONI_PIZZA.get()),has(ModItems.PEPPERONI_PIZZA.get()))
+                .save(consumer);
     }
 
 
