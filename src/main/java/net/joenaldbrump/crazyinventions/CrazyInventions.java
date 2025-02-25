@@ -59,6 +59,8 @@ public class CrazyInventions {
             event.accept(ModItems.RED_PEPPER);
             event.accept(ModItems.RED_PEPPER_SEEDS);
             event.accept(ModItems.PAPRIKA);
+            event.accept(ModItems.PEPPERONI_PIZZA);
+            event.accept(ModItems.PEPPERONI_PIZZA_SLICE);
         }
 
     }

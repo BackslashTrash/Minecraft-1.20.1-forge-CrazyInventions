@@ -10,6 +10,7 @@ import net.joenaldbrump.crazyinventions.item.custom.PanHelmet;
 import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.player.Player;
 import software.bernie.geckolib.cache.object.BakedGeoModel;
 import software.bernie.geckolib.cache.object.GeoBone;
@@ -24,12 +25,13 @@ public class FryingPanArmorRenderer extends GeoArmorRenderer<PanHelmet> {
     @Override
     public void actuallyRender(PoseStack poseStack, PanHelmet animatable, BakedGeoModel model, RenderType renderType, MultiBufferSource bufferSource, VertexConsumer buffer, boolean isReRender, float partialTick, int packedLight, int packedOverlay, float red, float green, float blue, float alpha) {
         super.actuallyRender(poseStack, animatable, model, renderType, bufferSource, buffer, isReRender, partialTick, packedLight, packedOverlay, red, green, blue, alpha);
-        if (getCurrentEntity() instanceof Player player) {
-            GeoBone bone = getHeadBone();
-            if (bone != null) {
-                poseStack.mulPose(Axis.YP.rotation(player.getYRot()));
-                poseStack.mulPose(Axis.XP.rotation(player.getXRot()));
-            }
+//        if (getCurrentEntity() instanceof Player player) {
+        Entity entity = getCurrentEntity();
+        GeoBone bone = getHeadBone();
+        if (bone != null) {
+            poseStack.mulPose(Axis.YP.rotation(entity.getYRot()));
+            poseStack.mulPose(Axis.XP.rotation(entity.getXRot()));
         }
+        //}
     }
 }

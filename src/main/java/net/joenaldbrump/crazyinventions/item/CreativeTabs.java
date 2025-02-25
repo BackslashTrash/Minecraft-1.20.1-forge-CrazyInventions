@@ -35,6 +35,8 @@ public class CreativeTabs {
                 output.accept(ModItems.RED_PEPPER_SEEDS.get());
                 output.accept(ModItems.RED_PEPPER.get());
                 output.accept(ModItems.PAPRIKA.get());
+                output.accept(ModItems.PEPPERONI_PIZZA.get());
+                output.accept(ModItems.PEPPERONI_PIZZA_SLICE.get());
             })
             .build()
     );
