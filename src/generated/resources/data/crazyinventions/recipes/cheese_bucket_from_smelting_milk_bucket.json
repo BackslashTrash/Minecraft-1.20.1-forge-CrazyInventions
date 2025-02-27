@@ -1,6 +1,6 @@
 {
   "type": "minecraft:smelting",
-  "category": "misc",
+  "category": "blocks",
   "cookingtime": 100,
   "experience": 0.25,
   "group": "cheese_bucket",
