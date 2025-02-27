@@ -38,7 +38,7 @@ public class ModItems {
             () -> new Item(new Item.Properties().food(ModFoodItems.CHEESE_PIZZA_SLICE)));
 
     public static final RegistryObject<Item> CHEESE_BUCKET = ITEMS.register("cheese_bucket",
-            () -> new CheeseBucketItem(new Item.Properties().craftRemainder(Items.BUCKET).stacksTo(16)));
+            () -> new CheeseBucketItem(ModBlocks.CHEESE_BLOCK.get(),new Item.Properties().craftRemainder(Items.BUCKET).stacksTo(16)));
 
     public static final RegistryObject<Item> RAW_COFFEE_BEANS = ITEMS.register("raw_coffee_beans",
             () -> new ItemNameBlockItem(ModBlocks.COFFEE_CROP.get(), new Item.Properties()));

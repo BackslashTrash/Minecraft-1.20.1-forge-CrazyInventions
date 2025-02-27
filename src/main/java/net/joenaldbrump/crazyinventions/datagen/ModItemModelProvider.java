@@ -33,6 +33,9 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.RED_PEPPER_SEEDS);
         simpleItem(ModItems.PEPPERONI_SAUSAGE);
         simpleItem(ModItems.COOKED_PEPPERONI_SAUSAGE);
+        simpleItem(ModItems.PEPPERONI_PIZZA);
+        simpleItem(ModItems.PEPPERONI_PIZZA_SLICE);
+
     }
 
     private ItemModelBuilder simpleItem(RegistryObject<Item> item) {
