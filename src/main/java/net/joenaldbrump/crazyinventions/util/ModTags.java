@@ -10,7 +10,7 @@ import net.minecraft.world.level.block.Block;
 
 public class ModTags {
     public static class Blocks {
-
+        public static final TagKey<Block>REQUIRES_CHEESE_TOOLS = tag("requires_cheese_tools");
 
 
         private static TagKey<Block>  tag(String name) {
@@ -21,7 +21,6 @@ public class ModTags {
     public static class Items {
 
         public static final TagKey<Item>CONTAINS_CHEESE = tag("contains_cheese");
-
         private static TagKey<Item>  tag(String name) {
             return ItemTags.create(new ResourceLocation(CrazyInventions.MOD_ID, name));
         }
