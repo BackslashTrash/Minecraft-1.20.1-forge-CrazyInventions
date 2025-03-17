@@ -16,7 +16,7 @@ import software.bernie.geckolib.renderer.GeoArmorRenderer;
 
 public class FrogHelmetRenderer extends GeoArmorRenderer<FrogHelmet> {
     public FrogHelmetRenderer() {
-        super(new DefaultedItemGeoModel<>(new ResourceLocation(CrazyInventions.MOD_ID,"armor/frog")));
+        super(new DefaultedItemGeoModel<>(new ResourceLocation(CrazyInventions.MOD_ID,"armor/frog_helmet")));
     }
 
     @Override

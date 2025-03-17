@@ -2,6 +2,7 @@ package net.joenaldbrump.crazyinventions.item;
 
 import net.joenaldbrump.crazyinventions.block.ModBlocks;
 import net.joenaldbrump.crazyinventions.item.custom.CheeseBucketItem;
+import net.joenaldbrump.crazyinventions.item.custom.FrogHelmet;
 import net.joenaldbrump.crazyinventions.item.custom.PanHelmet;
 import net.joenaldbrump.crazyinventions.item.custom.StarbucksLatteItem;
 import net.minecraft.world.food.FoodProperties;
@@ -75,6 +76,9 @@ public class ModItems {
 
     public static final RegistryObject<Item> PEPPERONI_PIZZA_SLICE = ITEMS.register("pepperoni_pizza_slice",
             () -> new Item(new Item.Properties().food(ModFoodItems.PEPPERONI_PIZZA_SLICE)));
+
+    public static final RegistryObject<Item> FROG_HELMET = ITEMS.register("frog_helmet",
+            () -> new FrogHelmet(ModArmorMaterials.PAN,new Item.Properties().stacksTo(1)));
 
 
 

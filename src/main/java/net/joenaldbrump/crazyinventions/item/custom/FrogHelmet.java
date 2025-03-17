@@ -26,8 +26,8 @@ import java.util.function.Consumer;
 public class FrogHelmet extends ArmorItem implements GeoItem {
     private AnimatableInstanceCache cache = new SingletonAnimatableInstanceCache(this);
 
-    public FrogHelmet(ArmorMaterial pMaterial, Type pType, Properties pProperties) {
-        super(pMaterial, pType, pProperties);
+    public FrogHelmet(ArmorMaterial pMaterial, Properties pProperties) {
+        super(pMaterial,Type.HELMET ,pProperties);
     }
 
     @Override

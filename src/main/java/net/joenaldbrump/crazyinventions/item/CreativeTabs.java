@@ -37,6 +37,7 @@ public class CreativeTabs {
                 output.accept(ModItems.PAPRIKA.get());
                 output.accept(ModItems.PEPPERONI_PIZZA.get());
                 output.accept(ModItems.PEPPERONI_PIZZA_SLICE.get());
+                output.accept(ModItems.FROG_HELMET.get());
             })
             .build()
     );

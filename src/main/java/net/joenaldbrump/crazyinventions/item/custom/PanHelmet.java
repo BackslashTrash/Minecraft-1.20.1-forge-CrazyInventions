@@ -75,7 +75,6 @@ public class PanHelmet extends ArmorItem implements GeoItem {
         return false;
     }
 
-
     @Override
     public void registerControllers(AnimatableManager.ControllerRegistrar controllerRegistrar) {
         controllerRegistrar.add(new AnimationController<>(this, "controller",0,this::predicate));
